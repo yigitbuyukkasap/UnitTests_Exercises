@@ -5,7 +5,7 @@ namespace TestNinja.Mocking
     public class InstallerHelper
     {
         private readonly IFileDownloader _fileDownloader;
-        private string _setupDestinationFile;
+        //private string _setupDestinationFile;
         public InstallerHelper(IFileDownloader fileDownloader)
         {
             _fileDownloader = fileDownloader;
@@ -20,7 +20,8 @@ namespace TestNinja.Mocking
                     string.Format("http://example.com/{0}/{1}",
                         customerName,
                         installerName),
-                    _setupDestinationFile);
+                        ""
+                        );
 
                 return true;
             }
